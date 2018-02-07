@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="assets/reset.css"> -->
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <title>trainSchedule</title>
+</head>
+
+<body>
+    <div class="wrapper" id="documentWrapper">
+        <div class="mainHeader">
+            <h1>Blake Train Schedule
+                <br>See below for arrival details</h1>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Current Train Schedule</div>
+            <div class="panel-body">
+                <table class="grid-container titles" id="scheduleTitles">
+                    <thread>
+                        <tr>
+                            <th class="tablehead" scope="Col">Train Name</th>
+                            <th class="tablehead" scope="Col">Destination</th>
+                            <th class="tablehead" scope="Col">Frequency (min)</th>
+                            <th class="tablehead" scope="Col">Next Arrival</th>
+                            <th class="tablehead" scope="Col">Minutes Away</th>
+                        </tr>
+                    </thread>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Add a Train</div>
+            <div class="panel-body">
+                <form id="trainInputForm"></form>
+                <!-- data input form -->
+                <label for="tName">Train Name</label>
+                <input class="form-control" id="tName" placeholder="Train Name" type="text">
+                <label for="dest">Destination</label>
+                <input class="form-control" id="dest" placeholder="Destination" type="text">
+                <label for="firstArrival">First Train Time (HH:mm - military time)</label>
+                <input class="form-control" id="firstArrival" placeholder="First Train Time (HH:mm - military time)" type="text">
+                <label for="freq">Frequency (min)</label>
+                <input class="form-control" id="freq" placeholder="Frequency (min)" type="text">
+                </form>
+                <!-- Submit Button -->
+                <br>
+                <button id="click-button" type="submit">Submit New Train</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
